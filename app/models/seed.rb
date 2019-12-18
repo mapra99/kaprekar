@@ -9,7 +9,7 @@ class Seed < ApplicationRecord
   def kaprekard
     num = kaprekard_processes.create(iteration: 0, value: value)
     20.times do |i|
-      num = kaprekard_processes.create(iteration: i+1, value: KaprekardProcess.calculate(num.value))
+      num = kaprekard_processes.create(iteration: i + 1, value: KaprekardProcess.calculate(num.value))
     end
   end
 end

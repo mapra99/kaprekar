@@ -7,16 +7,8 @@ class KaprekardProcess < ApplicationRecord
   validates :value, presence: true
 
   def self.calculate(num)
-    highest(num) - lowest(num)
-  end
-
-  private
-
-  def self.highest(num)
-    num.digits.sort.reverse.join.to_i
-  end
-
-  def self.lowest(num)
-    num.digits.sort.join.to_i
+    highest = num.digits.sort.reverse.join.to_i
+    lowest = num.digits.sort.join.to_i
+    highest - lowest
   end
 end
