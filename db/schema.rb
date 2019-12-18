@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2019_12_18_210335) do
   enable_extension "plpgsql"
 
   create_table "kaprekard_processes", force: :cascade do |t|
-    t.integer "iteration"
-    t.bigint "value"
+    t.integer "iteration", null: false
+    t.bigint "value", null: false
     t.bigint "seed_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_12_18_210335) do
   end
 
   create_table "seeds", force: :cascade do |t|
-    t.bigint "value"
+    t.bigint "value", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
