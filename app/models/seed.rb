@@ -2,7 +2,7 @@
 
 class Seed < ApplicationRecord
   after_save :kaprekard
-  
+
   has_many :kaprekard_processes
 
   validates :value, numericality: { only_integer: true, greater_than_or_equal_to: 10 },

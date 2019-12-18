@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SeedsController < ApplicationController
   def create
     @seed = Seed.new(value: params[:seed][:value])
