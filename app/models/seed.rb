@@ -5,7 +5,7 @@ class Seed < ApplicationRecord
 
   has_many :kaprekard_processes
 
-  validates :value, numericality: { only_integer: true, greater_than_or_equal_to: 10 },
+  validates :value, numericality: { only_integer: true, greater_than_or_equal_to: 10, less_than_or_equal_to: 999_998 },
                     presence: true, uniqueness: true
 
   def kaprekard
