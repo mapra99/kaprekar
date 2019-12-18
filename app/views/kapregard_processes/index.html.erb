@@ -1,1 +1,8 @@
+<h1>The Kaprekar Process</h1>
+<%= form_for @seed do |f| %>
+  <%= f.label :value %>
+  <%= f.number_field :value, min: 10%>
+
+  <%= f.submit "Create new entry"%>
+<% end %>
 <%= line_chart @series, xtitle: 'Iteration', ytitle: 'Value'%>
